@@ -1,0 +1,12 @@
+.description-container {
+  width: 49%;
+  min-height: 291px;
+  background-color: #444;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.guide {
+  margin: 20px;
+  font-size: 20px;
+}

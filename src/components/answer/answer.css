@@ -1,0 +1,35 @@
+.answer-container {
+  width: 49%;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: #444;
+}
+
+.answer-list {
+  margin: 0;
+  padding: 0;
+}
+
+.answer {
+  padding: 12px 0 12px 20px;
+  border-bottom: 1px solid grey;
+  list-style-type: none;
+  font-size: 20px
+}
+
+.answer-last {
+  border-bottom: 0;
+}
+
+.answer:hover {
+  background-color: grey;
+}
+
+.check {
+  display: inline-block;
+  margin-right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #303030;
+}
