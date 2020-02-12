@@ -15,7 +15,7 @@ class App extends Component {
     points: 5,
     disabled: true,
     descriptionStart: false,
-    endGame: false
+    endGame: true
   }
 
   sumResult = (e) => {
@@ -60,6 +60,11 @@ class App extends Component {
   }
 
   restart = () => {
+    const list = document.getElementsByClassName('list-species-birds');
+
+    list[list.length - 1].classList.remove('active');
+    list[0].classList.add('active');
+
     this.setState({
       result: 0,
       numQuestion: 0,
