@@ -37,3 +37,41 @@
 .active {
   background-color: #00bc8c;
 }
+
+@media (max-width: 1150px) {
+  .list-container {
+    margin: auto;
+    width: 96%;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .species-birds-container {
+    display: block;
+    text-align: center;
+  }
+
+	.list-species-birds {
+    width: 30.6%;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.list-species-birds {
+    width: 29.7%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+	.list-species-birds {
+    width: 43%;
+    font-size: 15px;
+  }
+
+  .list-questions {
+    display: block;
+    text-align: center
+  }
+}

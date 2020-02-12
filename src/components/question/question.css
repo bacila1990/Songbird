@@ -18,14 +18,39 @@
 
 .name-bird {
   font-size: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 6px;
   border-bottom: 2px solid grey;
 }
 
 .sound-bird {
-  margin-top: 26px;
+  margin-top: 4%;
 }
 
 audio {
   width: 100%;
+}
+
+@media (max-width: 1150px) {
+  .question-container {
+    margin: auto;
+    width: 92%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .question-container {
+    width: 91%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .question-container {
+    display: block;
+    width: 84%;
+    text-align: center;
+  }
+
+  .question {
+    margin-left: 0px;
+  }
 }

@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import './question.css'
-import bird from '../../images/bird-none.jpg'
+import ReactAudioPlayer from 'react-audio-player';
+import imageNone from '../../images/bird-none.jpg';
+
 
 class Question extends Component {
-
   render() {
+    const { image, name, audio, disabled } = this.props
 
     return (
       <div className = 'question-container'>
-        <img className = 'img-bird' src= { bird } alt="bird"/>
+        <img className = 'img-bird' src= { disabled ? (imageNone) : (image) } alt="bird"/>
         <div className = 'question'>
-          <div className = 'name-bird'>******</div>
+          <div className = 'name-bird'> {  disabled ? ('*****') : (name)} </div>
           <div className = 'sound-bird'>
-            <audio controls>
-              <source src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3" type="audio/mpeg" />
-            </audio>
+          <ReactAudioPlayer
+            src= { audio }
+            controls
+            />
           </div>
         </div>
       </div>

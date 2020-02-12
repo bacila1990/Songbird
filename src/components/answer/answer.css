@@ -11,7 +11,7 @@
 }
 
 .answer {
-  padding: 12px 0 12px 20px;
+  padding: 16px 0 16px 20px;
   border-bottom: 1px solid grey;
   list-style-type: none;
   font-size: 20px
@@ -32,4 +32,23 @@
   height: 10px;
   border-radius: 50%;
   background-color: #303030;
+  pointer-events: none;
+}
+
+@media (min-width: 767px) and (max-width: 1150px) {
+  .answer-container {
+    width: 37%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .answer-container {
+    width: 24%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .answer-container {
+    width: 99%;
+  }
 }
