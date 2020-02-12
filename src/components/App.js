@@ -15,7 +15,7 @@ class App extends Component {
     points: 5,
     disabled: true,
     descriptionStart: false,
-    endGame: true
+    endGame: false
   }
 
   sumResult = (e) => {
