@@ -1,0 +1,53 @@
+.description-container {
+  width: 49%;
+  min-height: 291px;
+  background-color: #444;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.guide {
+  display: flex;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.species-bird {
+  font-size: 20px;
+  border-bottom: solid 2px grey;
+  padding: 10px 0 8px 0;
+}
+
+.description-bird {
+  padding: 0 10px 0 10px;
+  font-size: 19px;
+}
+
+.prompt {
+  padding: 15px;
+  font-size: 20px;
+}
+
+@media (min-width: 767px) and (max-width: 1150px) {
+  .description-container {
+    width: 61%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .description-container {
+    width: 74%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .description-container {
+    width: 99%;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .guide {
+    display: block;
+  }
+}
