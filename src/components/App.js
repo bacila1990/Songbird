@@ -99,7 +99,7 @@ class App extends Component {
                 audio = {birdsData[numQuestion][answer].audio}
                 disabled = {disabled}/>
               <div className = 'answer-description'>
-                <Answer bird = {birdsData[numQuestion]} answerClick = {this.answerClick} answer = {answer} />
+                <Answer bird={birdsData[numQuestion]} answerClick={this.answerClick} answer={answer}  disabled={disabled}/>
                 <Description
                   image = {birdsData[numQuestion][clickBird].image}
                   name = {birdsData[numQuestion][clickBird].name}

@@ -1,40 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './answer.css'
 
-class Answer extends Component {
+export default function Answer(props) {
+  const questionAnswer = (e) => {
 
+    if (!props.disabled) return;
 
-  questionAnswer = (e) => {
-    const targetBird = [...document.getElementsByClassName('answer')];
-
-    if (this.props.bird[this.props.answer].name === e.target.innerText) {
+    if (props.answer === Number(e.target.id)) {
       e.target.firstElementChild.style.backgroundColor = '#00bc8c';
-      
-      return this.props.answerClick(targetBird.indexOf(e.target), 0, false)
+
+      return props.answerClick(e.target.id, 0, false)
     } else {
       e.target.firstElementChild.style.backgroundColor = 'red';
     }
 
-    return this.props.answerClick(targetBird.indexOf(e.target))
+    return props.answerClick(e.target.id)
   }
 
-  render() {
-    const { questionAnswer } = this;
-    const { bird } = this.props;
+  const { bird } = props;
 
-    return (
-      <div className = 'answer-container'>
-        <ul className = 'answer-list' onMouseUp= {questionAnswer}>
-          <li className = 'answer'><span className = 'check'></span>{bird[0].name}</li>
-          <li className = 'answer'><span className = 'check'></span>{bird[1].name}</li>
-          <li className = 'answer'><span className = 'check'></span>{bird[2].name}</li>
-          <li className = 'answer'><span className = 'check'></span>{bird[3].name}</li>
-          <li className = 'answer'><span className = 'check'></span>{bird[4].name}</li>
-          <li className = 'answer answer-last'><span className = 'check'></span>{bird[5].name}</li>
-        </ul>
-      </div>
-    )
-  }
+  return (
+    <div className = 'answer-container'>
+      <ul className = 'answer-list' onClick={questionAnswer}>
+      { bird.map(item => <li id={item.id} key={item.id} className='answer'><span  className ='check'></span>{item.name}</li>) }
+      </ul>
+    </div>
+  )
 }
-
-export default Answer
